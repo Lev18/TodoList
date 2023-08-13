@@ -20,6 +20,7 @@ class TodoList {
 public:
     TodoList(const std::string& filePath);
     ~TodoList();
+    TodoList(const TodoList& rsh) = delete;
 
     void addTask(const std::string& task, const std::string& data, const std::string& time, const std::string& status);
     bool parseDate(const std::string& dateString, struct tm& result);
